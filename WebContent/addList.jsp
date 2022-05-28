@@ -17,7 +17,7 @@
 </head>
 <body>
 	<form action="./add.jsp" method="get">
-	<table>
+	<table border="1">
 		<tr>
 			<td>이름</td>
 			<td><input type="text" name="name" value=""></td>
@@ -25,7 +25,7 @@
 			<td><input type="password" name="password" value=""></td>
 		</tr>
 		<tr>
-			<td colspan="4"><input type="text" name="content" value=""></td>
+			<td colspan="4"><textarea id="content" cols="60" rows="10"></textarea></td>
 		</tr>
 		<tr>
 			<td colspan="4"><button type="submit">확인</button></td>
@@ -36,7 +36,7 @@
 	<br>
 
 
-	<%for(int i = 0 ; i <= guestList.size() ; i++){%>
+	<%for(int i = 0 ; i < guestList.size(); i++){%>
 		<table border="1">
 			<tr>
 				<td><%= guestList.get(i).getNo() %></td>
