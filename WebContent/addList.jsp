@@ -37,19 +37,19 @@
 
 
 	<%for(int i = 0 ; i < guestList.size(); i++){%>
-		<table border="1">
-			<tr>
-				<td><%= guestList.get(i).getNo() %></td>
-				<td><%= guestList.get(i).getName() %></td>
-				<td><%= guestList.get(i).getRegDate() %></td>
-				<td><a href="./deleteForm.jsp">삭제</a></td>
-			</tr>
-			<tr>
-				<td colspan="4"><%= guestList.get(i).getContent() %></td>
-			</tr>
-		</table>
-		<br>
-		<br>
+			<table border="1">
+				<tr>
+					<td><%= guestList.get(i).getNo() %></td>
+					<td><%= guestList.get(i).getName() %></td>
+					<td><%= guestList.get(i).getRegDate() %></td>
+					<td><a href="./deleteForm.jsp?no=<%=guestList.get(i).getNo()%>">삭제</a></td>
+				</tr>
+				<tr>
+					<td colspan="4"><%= guestList.get(i).getContent() %></td>
+				</tr>
+			</table>
+			<br>
+			<br>
 		<%}%>
 </body>
 </html>
